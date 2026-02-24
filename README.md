@@ -1,31 +1,28 @@
-# Soluções Essenciais para sua Barbearia com a Cria Tech!
+# Cria Tech 🚀
 
-Aumente a eficiência e o lucro da sua barbearia com nossas soluções de gestão e agendamento.
+Landing page para uma agência de tecnologia ou serviços digitais, focada em conversão e apresentação de equipe.
+
+## 🛠️ Tecnologias Utilizadas
+
+![HTML](https://img.shields.io/badge/HTML-black?style=for-the-badge&logo=html) ![CSS](https://img.shields.io/badge/CSS-black?style=for-the-badge&logo=css) ![JavaScript](https://img.shields.io/badge/JavaScript-black?style=for-the-badge&logo=javascript)
+
+## ✨ Funcionalidades
+
+- Interface moderna
+- Apresentação de membros da equipe
+- Design limpo
+
+## 📸 Visual do Projeto
+
+*(Adicione screenshots aqui para deixar o README ainda mais bonito!)*
+
+## 🚀 Como executar o projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Newksitesfss/cria-tech.git
+   ```
+2. Abra o arquivo `index.html` no seu navegador.
 
 ---
-
-## 1. Sistema de Agendamento Profissional
-
-**Controle total dos seus horários e clientes.**
-
-![Sistema de Agendamento Profissional](/assets/agendamento_129.png)
-
-### POR APENAS R$ 129,00
-
----
-
-## 2. Sistema de Registro de Cortes e Gestão
-
-**Gerencie cortes, clientes, atendimentos e o financeiro da sua barbearia.**
-
-![Sistema de Registro de Cortes e Gestão](/assets/registro_cortes_149.png)
-
-### POR APENAS R$ 149,00
-
----
-
-## Fale Conosco e Comece a Lucrar Mais!
-
-**Clique no link abaixo para falar diretamente no WhatsApp e adquirir sua solução!**
-
-[**QUERO MINHA SOLUÇÃO AGORA!**](https://wa.me/5581996744143)
+Desenvolvido por [Newksitesfss](https://github.com/Newksitesfss)
