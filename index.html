@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CriaTech — Sites, Sistemas & Design</title>
+  <meta name="description" content="CriaTech - Desenvolvimento web, sistemas e design. Vitor Guilherme & Lucas Moreira" />
+  <link rel="icon" href="logoIcon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cursor personalizado -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Partículas de fundo -->
+  <canvas id="particles"></canvas>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#" class="logo-wrap">
+        <div class="logo-icon">
+            <img src="logo.png" class="logo-circle"> </div>
+        <div class="logo-text">
+          <span class="logo-name">CRIA<span class="logo-accent">TECH</span></span>
+          <span class="logo-sub">Sites • Sistemas • Design</span>
+        </div>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#sistemas" class="nav-link">Sistemas</a>
+        <a href="#services" class="nav-link">Serviços</a>
+        <a href="#clientes" class="nav-link">Clientes</a>
+        <a href="#portfolio" class="nav-link">Portfólio</a>
+        <a href="#team" class="nav-link">Sobre</a>
+        <a href="#contact" class="nav-link">Contato</a>
+        <a href="documentacao.html" class="nav-link">Documentação</a>
+        <a href="https://wa.me/5581996744143?text=Ol%C3%A1%2C+quero+um+or%C3%A7amento+com+a+CriaTech" target="_blank" class="btn-nav">Fale conosco</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- BARBER PRO HIGHLIGHT -->
+    <div class="launch-strip-container" data-reveal>
+      <div class="launch-strip">
+        <div class="launch-strip-badge">
+          <span class="launch-strip-dot"></span>
+          NOVIDADE
+        </div>
+        <div class="launch-strip-text">
+          <strong>BarberPro</strong> para barbearias e <strong>CriaOficina</strong> para oficinas, clínicas e lojas — nossos sistemas de gestão já disponíveis.
+        </div>
+        <a href="#sistemas" class="launch-strip-cta">
+          Conhecer os sistemas <span>→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-inner">
+        <div class="hero-content" data-reveal>
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Disponível para novos projetos
+          </div>
+          <h1 class="hero-title">
+            O futuro da sua Empresa<br>
+            <span class="hero-highlight">começa aqui</span>
+          </h1>
+          <p class="hero-desc">Sistemas de gestão inteligentes, sites de alta conversão e automações que transformam seu negócio em uma máquina de lucro.</p>
+          <div class="hero-btns">
+            <a href="https://wa.me/5581996744143?text=Ol%C3%A1%2C+quero+um+or%C3%A7amento+com+a+CriaTech" target="_blank" class="btn-primary">
+              <span>Solicitar Orçamento</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#portfolio" class="btn-ghost">Ver portfólio</a>
+          </div>
+
+          <!-- BARBER PRO SECTION (DESTACADO NO INICIO) -->
+          <div class="barber-pro-section">
+            <div class="barber-pro-logo">
+              <img src="Barbearia.jpg" alt="Barber Pro Logo" class="bp-logo-img">
+            </div>
+            <div class="barber-pro-content">
+              <h3 class="barber-pro-title">BarberPro</h3>
+              <p class="barber-pro-subtitle">O sistema de agendamentos líder para barbearias modernas</p>
+              <a href="https://wa.me/5581996744143?text=Ol%C3%A1%2C+gostaria+de+gerenciar+minha+barbearia+com+o+Barber+Pro" target="_blank" class="btn-barber-pro">
+                <span>Gerenciar minha barbearia</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laptop Mockup -->
+        <div class="hero-mockup" data-reveal-right>
+          <div class="laptop-wrap">
+            <div class="laptop-glow"></div>
+            <div class="laptop">
+              <div class="laptop-screen">
+                <div class="screen-inner">
+                  <div class="mock-header">
+                    <div class="mock-dots"><span></span><span></span><span></span></div>
+                    <div class="mock-bar"></div>
+                  </div>
+            
+                  <div class="mock-nav-bar">
+                    <div class="mock-nav-item active-nav"></div>
+                    <div class="mock-nav-item"></div>
+                    <div class="mock-nav-item"></div>
+                    <div class="mock-cta-btn"></div>
+                  </div>
+                  <div class="mock-cards">
+                    <div class="mock-card pulse-card">
+                      <div class="card-icon-mock blue-icon"></div>
+                      <div class="card-lines"><div></div><div></div></div>
+                    </div>
+                    <div class="mock-card">
+                      <div class="card-icon-mock cyan-icon"></div>
+                      <div class="card-lines"><div></div><div></div></div>
+                    </div>
+                    <div class="mock-card">
+                      <div class="card-icon-mock purple-icon"></div>
+                      <div class="card-lines"><div></div><div></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="laptop-base">
+                <div class="laptop-notch"></div>
+              </div>
+            </div>
+            <!-- floating badges -->
+            <div class="float-badge float-1">
+              <span class="fb-icon">⚡</span>
+              <div><div class="fb-title">Sistemas Pro</div><div class="fb-sub">Gestão Ágil</div></div>
+            </div>
+            <div class="float-badge float-2">
+              <span class="fb-icon">📊</span>
+              <div><div class="fb-title">Dashboards</div><div class="fb-sub">Dados em tempo real</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-bar" data-reveal>
+        <div class="stat-item">
+          <span class="stat-num" data-count="50">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projetos entregues</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="30">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Clientes atendidos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="2">0</span><span class="stat-plus">M+</span>
+          <span class="stat-label">Pessoas impactadas</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="98">0</span><span class="stat-plus">%</span>
+          <span class="stat-label">Satisfação dos clientes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SISTEMAS: BARBERPRO + CRIAOFICINA -->
+    <section id="sistemas" class="section feature-highlight">
+      <div class="section-inner">
+        <div class="section-label" data-reveal>NOSSOS SISTEMAS</div>
+        <h2 class="section-title" data-reveal>Sistemas próprios que <span class="gradient-text">vendem sozinhos</span></h2>
+        <p class="section-desc" data-reveal>Além de sites, desenvolvemos e mantemos dois sistemas de gestão prontos para o seu negócio — com suporte da CriaTech incluso.</p>
+
+        <!-- BARBERPRO -->
+        <div class="highlight-card" data-reveal>
+          <div class="highlight-content">
+            <div class="section-label">SISTEMA Nº 1 — DISPONÍVEL</div>
+            <h2 class="section-title">BarberPro: <span class="gradient-text">Sua barbearia no controle</span></h2>
+            <p class="section-desc">O sistema de agendamento pensado para barbearias e salões modernos. Menos faltas, mais cadeiras ocupadas, mais faturamento.</p>
+
+            <div class="feature-tags">
+              <div class="f-tag"><span>✓</span> Agenda online 24h</div>
+              <div class="f-tag"><span>✓</span> Confirmação automática</div>
+              <div class="f-tag"><span>✓</span> Cadastro de clientes</div>
+              <div class="f-tag"><span>✓</span> Registro de cortes</div>
+              <div class="f-tag"><span>✓</span> Controle de barbeiros</div>
+              <div class="f-tag"><span>✓</span> Histórico de atendimentos</div>
+              <div class="f-tag"><span>✓</span> Lembretes via WhatsApp</div>
+              <div class="f-tag"><span>✓</span> Relatórios de faturamento</div>
+            </div>
+
+            <a href="https://wa.me/5581996744143?text=Ol%C3%A1%2C+quero+conhecer+o+BarberPro" target="_blank" class="btn-primary">
+              <span>Quero o BarberPro</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="highlight-visual">
+            <div class="dashboard-mockup">
+              <div class="db-screen">
+                <div class="db-sidebar"></div>
+                <div class="db-main">
+                  <div class="db-header"></div>
+                  <div class="db-grid">
+                    <div class="db-card"></div>
+                    <div class="db-card"></div>
+                    <div class="db-card"></div>
+                    <div class="db-card"></div>
+                  </div>
+                  <div class="db-chart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CRIAOFICINA -->
+        <div class="highlight-card highlight-card-reverse" data-reveal>
+          <div class="highlight-visual">
+            <div class="dashboard-mockup">
+              <div class="db-screen">
+                <div class="db-sidebar"></div>
+                <div class="db-main">
+                  <div class="db-header"></div>
+                  <div class="db-grid">
+                    <div class="db-card"></div>
+                    <div class="db-card"></div>
+                    <div class="db-card"></div>
+                    <div class="db-card"></div>
+                  </div>
+                  <div class="db-chart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="highlight-content">
+            <div class="section-label">SISTEMA Nº 2 — GRANDE LANÇAMENTO</div>
+            <h2 class="section-title">CriaOficina: <span class="gradient-text">Gestão total do seu negócio</span></h2>
+            <p class="section-desc">Criado para oficinas mecânicas, mas pronto para <strong>clínicas, salões, lojas e outros comércios</strong> que precisam de controle completo em um único painel.</p>
+
+            <div class="feature-tags">
+              <div class="f-tag"><span>✓</span> Gestão de Clientes</div>
+              <div class="f-tag"><span>✓</span> Controle de Veículos</div>
+              <div class="f-tag"><span>✓</span> Ordens de Serviço</div>
+              <div class="f-tag"><span>✓</span> Gestão de Vendas</div>
+              <div class="f-tag"><span>✓</span> Controle de Estoque</div>
+              <div class="f-tag"><span>✓</span> Caixa & Financeiro</div>
+              <div class="f-tag"><span>✓</span> Fechamento de Caixas</div>
+              <div class="f-tag"><span>✓</span> Relatórios Detalhados</div>
+            </div>
+            <p class="section-desc" style="margin-top:-1.5rem; margin-bottom:2rem; font-size:0.9rem;">Ideal para: oficinas mecânicas, clínicas, consultórios, salões, lojas e comércios em geral.</p>
+
+            <a href="https://wa.me/5581996744143?text=Ol%C3%A1%2C+quero+saber+mais+sobre+o+CriaOficina" target="_blank" class="btn-primary">
+              <span>Solicitar Demonstração</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTES / PARCEIROS -->
+    <section id="clientes" class="section clients">
+      <div class="section-inner">
+        <div class="section-label" data-reveal>Quem confia na CriaTech</div>
+        <h2 class="section-title" data-reveal>Empresas que já <span class="gradient-text">transformamos</span></h2>
+        <p class="section-desc" data-reveal>Temos vínculo direto com empresas em todo o Brasil — desenvolvemos e mantemos os sites e sistemas abaixo.</p>
+
+        <div class="clients-grid">
+          <a href="https://www.segbrasilmangabeira.com.br" target="_blank" class="client-card" data-reveal>
+            <div class="client-icon">🚗</div>
+            <h4>Seg Brasil Mangabeira</h4>
+            <p>Proteção veicular — João Pessoa/PB</p>
+            <span class="client-link">segbrasilmangabeira.com.br <span>→</span></span>
+          </a>
+          <a href="https://www.visionfleet.solutions" target="_blank" class="client-card" data-reveal>
+            <div class="client-icon">🛰️</div>
+            <h4>Vision Fleet</h4>
+            <p>Rastreamento e videotelemetria de frotas</p>
+            <span class="client-link">visionfleet.solutions <span>→</span></span>
+          </a>
+          <a href="https://www.jdseguranca.online" target="_blank" class="client-card" data-reveal>
+            <div class="client-icon">🎥</div>
+            <h4>JDS Segurança Eletrônica</h4>
+            <p>CFTV, alarmes e monitoramento — Recife/PE</p>
+            <span class="client-link">jdseguranca.online <span>→</span></span>
+          </a>
+          <a href="https://www.marciliosegurancaeletronica.online" target="_blank" class="client-card" data-reveal>
+            <div class="client-icon">🔐</div>
+            <h4>Marcílio Segurança Eletrônica</h4>
+            <p>Cercas elétricas, câmeras e automação</p>
+            <span class="client-link">marciliosegurancaeletronica.online <span>→</span></span>
+          </a>
+          <a href="https://www.michelschwartzrepresentacoes.shop" target="_blank" class="client-card" data-reveal>
+            <div class="client-icon">💳</div>
+            <h4>Michel Representações</h4>
+            <p>Proteção veicular, crédito e limpeza de nome</p>
+            <span class="client-link">michelschwartzrepresentacoes.shop <span>→</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section services">
+      <div class="section-inner">
+        <div class="section-label" data-reveal>O que fazemos</div>
+        <h2 class="section-title" data-reveal>Soluções completas para<br><span class="gradient-text">seu negócio digital</span></h2>
+        <p class="section-desc" data-reveal>Da estratégia ao código — entregamos soluções que convertem visitantes em clientes.</p>
+
+        <div class="services-grid">
+          <div class="service-card" data-reveal>
+            <div class="svc-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="4" width="24" height="17" rx="2" stroke="url(#s1)" stroke-width="1.8"/><path d="M9 25H19M14 21V25" stroke="url(#s1)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="s1" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#0049ff"/><stop offset="1" stop-color="#00d4ff"/></linearGradient></defs></svg>
+            </div>
+            <h3>Sites Profissionais</h3>
+            <p>Design responsivo, SEO técnico, velocidade máxima. Seu site vendendo 24h por dia.</p>
+            <ul class="svc-list">
+              <li>Landing pages de alta conversão</li>
+              <li>Portfólios e sites institucionais</li>
+              <li>E-commerces completos</li>
+            </ul>
+            <div class="svc-cta">
+              <a href="#contact" class="svc-link">Solicitar <span>→</span></a>
+            </div>
+            <div class="card-glow blue-glow"></div>
+          </div>
+
+          <div class="service-card featured-card" data-reveal>
+            <div class="featured-badge">Mais popular</div>
+            <div class="svc-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 14 L14 4 L24 14 L14 24 Z" stroke="url(#s2)" stroke-width="1.8" stroke-linejoin="round"/><circle cx="14" cy="14" r="3" fill="url(#s2)"/><defs><linearGradient id="s2" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#0049ff"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs></svg>
+            </div>
+            <h3>Sistemas & Dashboards</h3>
+            <p>Aplicações sob medida: gestão, agendamento, CRMs e integrações com APIs modernas.</p>
+            <ul class="svc-list">
+              <li>BarberPro — Agendamento p/ barbearias</li>
+              <li>CriaOficina — Gestão p/ oficinas, clínicas e lojas</li>
+              <li>Registro de cortes / produtos</li>
+              <li>Sistemas sob medida e integrações</li>
+            </ul>
+            <div class="svc-cta">
+              <a href="#contact" class="svc-link">Solicitar <span>→</span></a>
+            </div>
+            <div class="card-glow purple-glow"></div>
+          </div>
+
+          <div class="service-card" data-reveal>
+            <div class="svc-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="5" stroke="url(#s3)" stroke-width="1.8"/><path d="M5 24c0-4.97 4.03-9 9-9s9 4.03 9 9" stroke="url(#s3)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="s3" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#0049ff"/></linearGradient></defs></svg>
+            </div>
+            <h3>Design & Brand</h3>
+            <p>Identidade visual que posiciona sua marca. UX/UI que converte e encanta usuários.</p>
+            <ul class="svc-list">
+              <li>Logo & identidade visual</li>
+              <li>Design de produto (UX/UI)</li>
+              <li>Prototipação rápida no Figma</li>
+            </ul>
+            <div class="svc-cta">
+              <a href="#contact" class="svc-link">Solicitar <span>→</span></a>
+            </div>
+            <div class="card-glow cyan-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+        <section id="portfolio" class="section portfolio">
+  <div class="section-inner">
+    <div class="section-label" data-reveal>Nosso trabalho</div>
+    <h2 class="section-title" data-reveal>PORTFÓLIO</h2>
+
+    <div class="portfolio-grid">
+
+      <div class="port-card port-card-launch" data-reveal>
+        <div class="port-launch-ribbon">🚀 Lançamento</div>
+        <div class="port-img port-img-4">
+          <img src="Barbearia.jpg" alt="BarberPro - Sistema de Agendamento para Barbearias">
+          <div class="port-overlay">
+            <span class="port-tag">Sistema de Agendamento</span>
+          </div>
+        </div>
+        <div class="port-info">
+          <h4>BarberPro <span class="port-new-tag">NOVO</span></h4>
+          <p>Sistema completo de agendamento para barbearias</p>
+        </div>
+      </div>
+
+      <div class="port-card" data-reveal>
+        <div class="port-img port-img-1">
+          <img src="clinic-management.webp" alt="Clínica Vitalis">
+          <div class="port-overlay">
+            <span class="port-tag">Site Institucional</span>
+          </div>
+        </div>
+        <div class="port-info">
+          <h4>Clínica Vitalis</h4>
+          <p>Site Institucional</p>
+        </div>
+      </div>
+
+      <div class="port-card" data-reveal>
+        <div class="port-img port-img-2">
+          <img src="Academia.jpg" alt="FitPro Academia">
+          <div class="port-overlay">
+            <span class="port-tag">Landing Page</span>
+          </div>
+        </div>
+        <div class="port-info">
+          <h4>FitPro Academia</h4>
+          <p>Landing Page</p>
+        </div>
+      </div>
+
+      <div class="port-card" data-reveal>
+        <div class="port-img port-img-3">
+          <img src="sistema-cgk.jpg" alt="Flow Solutions">
+          <div class="port-overlay">
+            <span class="port-tag">Sistema Web</span>
+          </div>
+        </div>
+        <div class="port-info">
+          <h4>Flow Solutions</h4>
+          <p>Sistema Web</p>
+        </div>
+      </div>
+
+      <div class="port-card" data-reveal>
+        <div class="port-img port-img-5">
+          <img src="ChatGPT Image 23 de abr. de 2026, 09_48_43.png" alt="Registro de produtos">
+          <div class="port-overlay">
+            <span class="port-tag">Registro de Cortes</span>
+          </div>
+        </div>
+        <div class="port-info">
+          <h4>Registro de produtos</h4>
+          <p>Sistema de Registro</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- PROCESS -->
+    <section class="section process">
+        <div class="section-label" data-reveal>Como trabalhamos</div>
+        <h2 class="section-title" data-reveal>Do inicio ao<br><span class="gradient-text">lançamento</span></h2>
+        <div class="process-steps">
+          <div class="process-step" data-reveal>
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h4>Briefing</h4>
+              <p>Entendemos seus objetivos, público-alvo e diferenciais do seu negócio.</p>
+            </div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step" data-reveal>
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h4>Design</h4>
+              <p>Criamos protótipos visuais e layouts que refletem sua identidade de marca.</p>
+            </div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step" data-reveal>
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h4>Desenvolvimento</h4>
+              <p>Codamos com as tecnologias mais modernas, rápidas e otimizadas para SEO.</p>
+            </div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step" data-reveal>
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h4>Lançamento</h4>
+              <p>Deploy, testes finais e entrega com suporte. Você no ar em 7 a 14 dias.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section team">
+      <div class="section-inner">
+        <div class="section-label" data-reveal>Quem somos</div>
+        <h2 class="section-title" data-reveal>Os fundadores<br><span class="gradient-text">da CriaTech</span></h2>
+
+        <div class="team-grid">
+          <div class="team-card" data-reveal>
+            <div class="team-photo-wrap">
+              <div class="team-ring"></div>
+              <div class="team-photo-placeholder">
+                <span>VG</span>
+              </div>
+              <img src="vitor.png" alt="Vitor Guilherme" class="team-photo" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <h3>Vitor Guilherme</h3>
+              <div class="team-role">Full-stack Developer & UI Designer</div>
+              <p>Especialista em criar experiências digitais de alto impacto. Apaixonado por código limpo e design que converte.</p>
+              <div class="team-tags">
+                <span>Python</span><span>Node.js</span><span>Java Script</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card" data-reveal>
+            <div class="team-photo-wrap">
+              <div class="team-ring"></div>
+              <div class="team-photo-placeholder">
+                <span>LM</span>
+              </div>
+              <img src="WhatsApp Image 2026-04-23 at 11.14.47.jpeg" alt="Lucas Moreira" class="team-photo" onerror="this.style.display='none'">
+            </div>
+            <div class="team-info">
+              <h3>Lucas Moreira</h3>
+              <div class="team-role">Full-stack & Designer Pro</div>
+              <p>Criativo e técnico ao mesmo tempo. Transforma ideias complexas em produtos digitais elegantes e funcionais.</p>
+              <div class="team-tags">
+                <span>Python</span><span>Design</span><span>Java script/ html css</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="contact-bg-glow"></div>
+      <div class="section-inner">
+        <div class="contact-grid">
+          <div class="contact-left" data-reveal>
+            <div class="section-label">Fale conosco</div>
+            <h2 class="section-title">Pronto para<br><span class="gradient-text">transformar</span><br>seu negócio?</h2>
+            <p>Resposta em poucas horas durante dias úteis. Orçamento gratuito e sem compromisso.</p>
+
+            <div class="contact-links">
+              <a href="https://wa.me/5581996744143?text=Ol%C3%A1%2C+quero+um+or%C3%A7amento+com+a+CriaTech" target="_blank" class="contact-link whatsapp-link">
+                <div class="cl-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                </div>
+                <div>
+                  <div class="cl-label">WhatsApp</div>
+                  <div class="cl-value">(81) 99674-4143</div>
+                </div>
+              </a>
+              <a href="https://www.instagram.com/criatech.web/" target="_blank" class="contact-link insta-link">
+                <div class="cl-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </div>
+                <div>
+                  <div class="cl-label">Instagram</div>
+                  <div class="cl-value">@criatech.web</div>
+                </div>
+              </a>
+              <a href="tel:+5581996744143" class="contact-link phone-link">
+                <div class="cl-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 7.81a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 13a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <div>
+                  <div class="cl-label">WhatsApp / Celular</div>
+                  <div class="cl-value">(81) 99674-4143</div>
+                </div>
+              </a>
+              <a href="tel:+5581987364575" class="contact-link phone-link">
+                <div class="cl-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 7.81a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 13a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <div>
+                  <div class="cl-label">Telefone fixo</div>
+                  <div class="cl-value">(81) 8736-4575</div>
+                </div>
+              </a>
+              <a href="documentacao.html" class="contact-link doc-link">
+                <div class="cl-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                </div>
+                <div>
+                  <div class="cl-label">Documentação</div>
+                  <div class="cl-value">Sobre a CriaTech e nossos sistemas</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-right" data-reveal>
+            <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+              <h3>Envie uma mensagem</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Nome</label>
+                  <input id="name" type="text" placeholder="Seu nome completo" required />
+                </div>
+                <div class="form-group">
+                  <label>E-mail</label>
+                  <input id="email" type="email" placeholder="seu@email.com" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Serviço de interesse</label>
+                <select id="service-select">
+                  <option value="">Selecione...</option>
+                  <option>Site Profissional</option>
+                  <option>Sistema/Dashboard</option>
+                  <option>Design & Brand</option>
+                  <option>Outro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Mensagem</label>
+                <textarea id="message" rows="4" placeholder="Conte sobre seu projeto..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary full-btn">
+                <span>Enviar pelo WhatsApp</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              </button>
+              <div id="formStatus" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    
+    <div class="footer-brand">
+      <div class="logo-icon small-logo">
+  <svg viewBox="0 0 40 40" width="28" height="28">
+    
+    <!-- LOGO -->
+    <image 
+    href="logo.png"
+    x="0"
+    y="0"
+    width="40"
+    height="40"
+    preserveAspectRatio="xMidYMid slice"
+  />
+    <!-- BORDA -->
+    <circle cx="20" cy="20" r="18" stroke="url(#flg)" stroke-width="2" fill="none"/>
+
+    <defs>
+      <linearGradient id="flg" x1="0" y1="0" x2="40" y2="40">
+        <stop stop-color="#0049ff"/>
+        <stop offset="1" stop-color="#00d4ff"/>
+      </linearGradient>
+    </defs>
+
+  </svg>
+</div>
+
+      <span class="footer-name">CRIA<span>TECH</span></span>
+    </div>
+
+    <div class="footer-links">
+      <a href="#sistemas">Sistemas</a>
+      <a href="#services">Serviços</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#team">Sobre</a>
+      <a href="#contact">Contato</a>
+      <a href="documentacao.html">Documentação</a>
+      <a href="https://www.instagram.com/criatech.web/" target="_blank">Instagram</a>
+    </div>
+
+    <div class="footer-copy">
+      © <span id="footerYear"></span> CriaTech — Vitor Guilherme & Lucas Moreira · (81) 99674-4143 · (81) 8736-4575
+    </div>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
