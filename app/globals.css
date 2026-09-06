@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #0b0e17;
+}
+
+::selection {
+  background: rgba(0, 73, 255, 0.2);
+  color: #0b0e17;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #0049ff, #00b4d8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+}
+
+.reveal-underline {
+  animation: gradient-shift 6s ease-in-out infinite;
+}
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+/* Botão com brilho deslizante */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.btn-shine:hover::before {
+  left: 140%;
+}
+
+/* Sombra suave embaixo, ao hover (efeito pedido: elemento selecionado "flutua" com sombra) */
+.shadow-under {
+  position: relative;
+}
+.shadow-under::after {
+  content: '';
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -14px;
+  height: 20px;
+  background: rgba(0, 73, 255, 0.35);
+  filter: blur(18px);
+  opacity: 0;
+  transform: scaleX(0.8) translateY(6px);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 50%;
+}
+.shadow-under:hover::after {
+  opacity: 1;
+  transform: scaleX(1) translateY(0);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f7fb;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7cee0;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0049ff;
+}
