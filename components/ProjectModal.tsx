@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect } from 'react';
-import { X, Bot } from 'lucide-react';
+import { X } from 'lucide-react';
 import type { Project } from '@/lib/data';
 import { waLink } from '@/lib/data';
 
@@ -84,8 +84,18 @@ export default function ProjectModal({
                   <Image src={project.image} alt={project.title} fill sizes="450px" className="object-cover" />
                 ) : (
                   <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-gradient-to-br from-brand-surfaceAlt to-brand-surfaceAlt2 p-8 text-center text-brand-muted">
-                    <Bot size={44} className="text-brand-cyan drop-shadow-[0_0_16px_rgba(0,145,201,0.4)]" />
-                    <span className="text-sm">Acesse o sistema completo ao vivo pelo botão abaixo</span>
+                    <span className="text-6xl drop-shadow-[0_0_16px_rgba(0,145,201,0.35)]">
+                      {project.icon ?? '✨'}
+                    </span>
+                    {project.price ? (
+                      <span className="font-sans text-3xl font-extrabold text-brand-ink">{project.price}</span>
+                    ) : (
+                      <span className="text-sm">
+                        {project.live
+                          ? 'Acesse o sistema completo ao vivo pelo botão abaixo'
+                          : 'Acesse o site completo pelo botão abaixo'}
+                      </span>
+                    )}
                   </div>
                 )}
                 <span className="absolute left-4 top-4 rounded-full bg-brand-blue px-3 py-1 text-xs font-bold text-white shadow-glowBlue">
@@ -99,7 +109,14 @@ export default function ProjectModal({
                 transition={{ delay: 0.15, duration: 0.5 }}
                 className="flex flex-col gap-4 p-6 sm:p-8"
               >
-                <h3 className="font-sans text-2xl font-extrabold text-brand-ink">{project.title}</h3>
+                <div className="flex flex-wrap items-center gap-3">
+                  <h3 className="font-sans text-2xl font-extrabold text-brand-ink">{project.title}</h3>
+                  {project.price && (
+                    <span className="rounded-full bg-brand-blue/10 px-3 py-1 font-sans text-sm font-extrabold text-brand-blue">
+                      {project.price}
+                    </span>
+                  )}
+                </div>
                 <p className="text-sm leading-relaxed text-brand-muted">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
@@ -120,19 +137,20 @@ export default function ProjectModal({
                       data-cursor-hover
                       className="inline-flex items-center gap-2 rounded-xl border border-brand-border px-6 py-3 font-medium text-brand-ink transition-all hover:border-brand-ink/30 hover:bg-brand-surfaceAlt"
                     >
-                      Ver sistema ao vivo ↗
+                      {project.category === 'site' ? 'Ver site ao vivo ↗' : 'Ver sistema ao vivo ↗'}
                     </a>
                   )}
                   <a
                     href={waLink(
-                      `Olá! Vi o projeto ${project.title} no portfólio da CriaTech e quero um orçamento de um projeto parecido.`
+                      project.ctaMessage ??
+                        `Olá! Vi o projeto ${project.title} no portfólio da CriaTech e quero um orçamento de um projeto parecido.`
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
                     data-cursor-hover
                     className="btn-shine inline-flex items-center gap-2 rounded-xl bg-brand-blue px-6 py-3 font-semibold text-white shadow-glowBlue transition-transform hover:-translate-y-0.5"
                   >
-                    Solicitar Orçamento →
+                    {project.ctaLabel ?? 'Solicitar Orçamento'} →
                   </a>
                   <button
                     type="button"

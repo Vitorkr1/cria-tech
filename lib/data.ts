@@ -32,12 +32,17 @@ export interface Project {
   categoryLabel: string;
   tag: string;
   image: string | null;
+  icon?: string;
   description: string;
   tags: string[];
   live?: string;
+  price?: string;
+  ctaLabel?: string;
+  ctaMessage?: string;
 }
 
 export const PROJECTS: Project[] = [
+  // ---------- SISTEMAS (os 3 sistemas próprios da CriaTech) ----------
   {
     id: 'barberpro',
     title: 'BarberPro',
@@ -50,50 +55,22 @@ export const PROJECTS: Project[] = [
       'Sistema completo de agendamento para barbearias e salões modernos: agenda online 24h, confirmação automática via WhatsApp, cadastro de clientes, registro de cortes e relatórios de faturamento em tempo real.',
     tags: ['Agendamento Online', 'WhatsApp', 'Multiusuário', 'Relatórios'],
     live: 'https://barberpro-6yix.onrender.com/',
+    ctaMessage: 'Olá, quero conhecer o BarberPro',
   },
   {
-    id: 'vitalis',
-    title: 'Clínica Vitalis',
-    category: 'site',
-    categoryLabel: 'Site Institucional',
-    tag: 'Site Institucional',
-    image: '/images/clinica-vitalis.webp',
-    description:
-      'Site institucional para clínica, com design responsivo, apresentação de especialidades, equipe médica e canais de contato direto para agendamento de consultas.',
-    tags: ['Site Responsivo', 'SEO', 'Institucional'],
-  },
-  {
-    id: 'fitpro',
-    title: 'FitPro Academia',
-    category: 'site',
-    categoryLabel: 'Landing Page',
-    tag: 'Landing Page',
-    image: '/images/fitpro-academia.jpg',
-    description:
-      'Landing page de alta conversão para academia, com foco em captação de novos alunos, planos em destaque e chamadas diretas para matrícula.',
-    tags: ['Landing Page', 'Alta Conversão', 'Mobile-first'],
-  },
-  {
-    id: 'flow',
-    title: 'Flow Solutions',
+    id: 'criaoficina',
+    title: 'CriaOficina',
+    isNew: true,
     category: 'sistema',
-    categoryLabel: 'Sistema Web',
-    tag: 'Sistema Web',
-    image: '/images/flow-solutions.jpg',
+    categoryLabel: 'Sistema de Gestão',
+    tag: '🏭 Grande lançamento',
+    image: null,
+    icon: '🛠️',
     description:
-      'Sistema web sob medida com dashboard de gestão, controle de processos internos e painéis de indicadores para tomada de decisão.',
-    tags: ['Dashboard', 'Gestão', 'Sistema sob medida'],
-  },
-  {
-    id: 'registro',
-    title: 'Registro de produtos',
-    category: 'sistema',
-    categoryLabel: 'Sistema de Registro',
-    tag: 'Registro de Cortes',
-    image: '/images/registro-produtos.png',
-    description:
-      'Sistema de registro e controle de produtos/cortes, com histórico completo por cliente e organização do fluxo de atendimento.',
-    tags: ['Registro', 'Controle', 'Histórico'],
+      'Sistema de gestão completo, criado para oficinas mecânicas e hoje usado também por clínicas, consultórios, salões e lojas: clientes, veículos, ordens de serviço, vendas, estoque e financeiro em um único painel.',
+    tags: ['Gestão Completa', 'Ordens de Serviço', 'Estoque', 'Financeiro'],
+    live: 'https://www.criaoficina.online',
+    ctaMessage: 'Olá, quero saber mais sobre o CriaOficina',
   },
   {
     id: 'finpilot',
@@ -103,10 +80,118 @@ export const PROJECTS: Project[] = [
     categoryLabel: 'Sistema com Inteligência Artificial',
     tag: '🤖 Novo · IA',
     image: null,
+    icon: '🤖',
     description:
       'Sistema inteligente de gestão financeira com dashboards automatizados, análise de fluxo de caixa e insights gerados por Inteligência Artificial para ajudar na tomada de decisão do negócio.',
     tags: ['Inteligência Artificial', 'Financeiro', 'Dashboards'],
     live: 'https://finpilot-ai-dvei.onrender.com/',
+  },
+
+  // ---------- SITES (clientes reais atendidos pela CriaTech) ----------
+  {
+    id: 'cmreguladora',
+    title: 'CM Reguladora',
+    category: 'site',
+    categoryLabel: 'Site Institucional',
+    tag: 'Site Institucional',
+    image: null,
+    icon: '📋',
+    description: 'Site institucional para regulação de sinistros e vistorias veiculares.',
+    tags: ['Site Institucional', 'Regulação de Sinistros'],
+    live: 'https://www.cmreguladora.com.br',
+  },
+  {
+    id: 'segbrasil',
+    title: 'Seg Brasil Mangabeira',
+    category: 'site',
+    categoryLabel: 'Site Institucional',
+    tag: 'Site Institucional',
+    image: null,
+    icon: '🚗',
+    description: 'Site institucional para proteção veicular — João Pessoa/PB.',
+    tags: ['Proteção Veicular', 'João Pessoa/PB'],
+    live: 'https://www.segbrasilmangabeira.com.br',
+  },
+  {
+    id: 'visionfleet',
+    title: 'Vision Fleet',
+    category: 'site',
+    categoryLabel: 'Site Institucional',
+    tag: 'Site Institucional',
+    image: null,
+    icon: '🛰️',
+    description: 'Site institucional para rastreamento e videotelemetria de frotas.',
+    tags: ['Rastreamento', 'Frotas'],
+    live: 'https://www.visionfleet.solutions',
+  },
+  {
+    id: 'jdseguranca',
+    title: 'JDS Segurança Eletrônica',
+    category: 'site',
+    categoryLabel: 'Site Institucional',
+    tag: 'Site Institucional',
+    image: null,
+    icon: '🎥',
+    description: 'Site institucional para CFTV, alarmes e monitoramento — Recife/PE.',
+    tags: ['CFTV', 'Monitoramento'],
+    live: 'https://www.jdseguranca.online',
+  },
+  {
+    id: 'marciliosegur',
+    title: 'Marcílio Segurança Eletrônica',
+    category: 'site',
+    categoryLabel: 'Site Institucional',
+    tag: 'Site Institucional',
+    image: null,
+    icon: '🔐',
+    description: 'Site institucional para cercas elétricas, câmeras e automação residencial.',
+    tags: ['Segurança Eletrônica', 'Automação'],
+    live: 'https://www.marciliosegurancaeletronica.online',
+  },
+  {
+    id: 'michelrep',
+    title: 'Michel Representações',
+    category: 'site',
+    categoryLabel: 'Site Institucional',
+    tag: 'Site Institucional',
+    image: null,
+    icon: '💳',
+    description: 'Site institucional para proteção veicular, crédito e limpeza de nome.',
+    tags: ['Proteção Veicular', 'Crédito'],
+    live: 'https://www.michelschwartzrepresentacoes.shop',
+  },
+
+  // ---------- MÍDIA (pacotes de gestão de redes sociais) ----------
+  {
+    id: 'midia-basico',
+    title: 'Plano Básico',
+    category: 'midia',
+    categoryLabel: 'Pacote de Mídia',
+    tag: 'Gestão de Redes Sociais',
+    image: null,
+    icon: '📱',
+    description:
+      '15 posts durante 15 dias: 1–2 stories por dia e 2 reels (1 por semana), incluindo tráfego pago de R$ 100,00. Redes inclusas: Facebook OU Instagram.',
+    tags: ['1–2 Stories/dia', '2 Reels', 'Tráfego pago R$100'],
+    price: 'R$ 850,00',
+    ctaLabel: 'Contratar Plano Básico',
+    ctaMessage: 'Olá, quero contratar o Plano Básico de mídia da CriaTech',
+  },
+  {
+    id: 'midia-plus',
+    title: 'Plano Plus',
+    isNew: true,
+    category: 'midia',
+    categoryLabel: 'Pacote de Mídia',
+    tag: '⭐ Mais completo',
+    image: null,
+    icon: '📸',
+    description:
+      'Posts de segunda a sábado durante todo o mês: 1–2 stories por dia, posts diários, 1 carrossel por semana e 1 reels por semana, incluindo tráfego pago de R$ 250,00. Redes inclusas: Facebook e Instagram.',
+    tags: ['Posts diários', '1 Carrossel/semana', '1 Reels/semana', 'Tráfego pago R$250'],
+    price: 'R$ 1.150,00',
+    ctaLabel: 'Contratar Plano Plus',
+    ctaMessage: 'Olá, quero contratar o Plano Plus de mídia da CriaTech',
   },
 ];
 

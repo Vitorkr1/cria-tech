@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useMemo, useState } from 'react';
-import { ArrowRight, Bot } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Reveal from './Reveal';
 import ProjectModal from './ProjectModal';
 import { PROJECT_FILTERS, PROJECTS, type Project, type ProjectCategory } from '@/lib/data';
@@ -56,9 +56,12 @@ export default function Projects() {
                 key={project.id}
                 layout
                 initial={{ opacity: 0, scale: 0.92 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.92 }}
-                transition={{ duration: 0.35, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  transition: { duration: 0.35, delay: Math.min(i * 0.04, 0.24), ease: [0.16, 1, 0.3, 1] },
+                }}
+                exit={{ opacity: 0, scale: 0.92, transition: { duration: 0.18, ease: [0.16, 1, 0.3, 1] } }}
                 className="group relative overflow-hidden rounded-2xl border border-brand-border bg-white shadow-soft transition-all hover:-translate-y-1.5 hover:shadow-softLg"
               >
                 {project.isNew && (
@@ -76,8 +79,8 @@ export default function Projects() {
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#0a0f2a] via-[#131a3a] to-[#0a0f20]">
-                      <Bot size={40} className="text-brand-cyan/70" />
+                    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#0a0f2a] via-[#131a3a] to-[#0a0f20] text-5xl">
+                      {project.icon ?? '✨'}
                     </div>
                   )}
                   <div className="absolute inset-0 flex flex-col items-start justify-end gap-3 bg-gradient-to-t from-black/85 via-black/10 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -94,16 +97,23 @@ export default function Projects() {
                     </button>
                   </div>
                 </div>
-                <div className="p-5">
-                  <h4 className="mb-1 flex items-center gap-2 font-semibold text-brand-ink">
-                    {project.title}
-                    {project.isNew && (
-                      <span className="rounded-full border border-brand-cyan/50 px-2 py-0.5 text-[0.6rem] font-bold tracking-wide text-brand-cyan">
-                        NOVO
-                      </span>
-                    )}
-                  </h4>
-                  <p className="text-sm text-brand-muted">{project.categoryLabel}</p>
+                <div className="flex items-start justify-between gap-2 p-5">
+                  <div>
+                    <h4 className="mb-1 flex items-center gap-2 font-semibold text-brand-ink">
+                      {project.title}
+                      {project.isNew && (
+                        <span className="rounded-full border border-brand-cyan/50 px-2 py-0.5 text-[0.6rem] font-bold tracking-wide text-brand-cyan">
+                          NOVO
+                        </span>
+                      )}
+                    </h4>
+                    <p className="text-sm text-brand-muted">{project.categoryLabel}</p>
+                  </div>
+                  {project.price && (
+                    <span className="shrink-0 whitespace-nowrap font-sans text-sm font-extrabold text-brand-blue">
+                      {project.price}
+                    </span>
+                  )}
                 </div>
               </motion.div>
             ))}

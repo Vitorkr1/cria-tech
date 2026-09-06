@@ -1,6 +1,7 @@
 'use client';
 
 import Reveal from './Reveal';
+import TiltCard from './TiltCard';
 import { CLIENTS } from '@/lib/data';
 
 export default function Clients() {
@@ -24,23 +25,25 @@ export default function Clients() {
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {CLIENTS.map((c, i) => (
-            <Reveal key={c.name} delay={i * 0.06}>
-              <a
-                href={c.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-cursor-hover
-                className="shadow-under block h-full rounded-2xl border border-brand-border bg-white p-7 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-cyan/40 hover:bg-brand-cyan/5"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-brand-blue/20 bg-brand-blue/10 text-xl">
-                  {c.icon}
-                </div>
-                <h4 className="mb-1.5 font-sans font-bold text-brand-ink">{c.name}</h4>
-                <p className="mb-4 text-sm leading-relaxed text-brand-muted">{c.desc}</p>
-                <span className="inline-flex items-center gap-1 break-words text-sm font-semibold text-brand-cyan">
-                  {c.url.replace('https://www.', '')} <span>→</span>
-                </span>
-              </a>
+            <Reveal key={c.name} delay={i * 0.06} className="h-full">
+              <TiltCard strength={6}>
+                <a
+                  href={c.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cursor-hover
+                  className="shadow-under block h-full rounded-2xl border border-brand-border bg-white p-7 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-cyan/40 hover:bg-brand-cyan/5"
+                >
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-brand-blue/20 bg-brand-blue/10 text-xl">
+                    {c.icon}
+                  </div>
+                  <h4 className="mb-1.5 font-sans font-bold text-brand-ink">{c.name}</h4>
+                  <p className="mb-4 text-sm leading-relaxed text-brand-muted">{c.desc}</p>
+                  <span className="inline-flex items-center gap-1 break-words text-sm font-semibold text-brand-cyan">
+                    {c.url.replace('https://www.', '')} <span>→</span>
+                  </span>
+                </a>
+              </TiltCard>
             </Reveal>
           ))}
         </div>

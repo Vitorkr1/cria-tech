@@ -2,6 +2,7 @@
 
 import { ArrowRight, Code2, PenTool, Sparkles } from 'lucide-react';
 import Reveal from './Reveal';
+import TiltCard from './TiltCard';
 import { SERVICES } from '@/lib/data';
 
 const ICONS = [Code2, Sparkles, PenTool];
@@ -26,8 +27,9 @@ export default function Services() {
           {SERVICES.map((s, i) => {
             const Icon = ICONS[i];
             return (
-              <Reveal key={s.title} delay={i * 0.08}>
-                <div
+              <Reveal key={s.title} delay={i * 0.08} className="h-full">
+                <TiltCard
+                  strength={6}
                   className={`shadow-under relative flex h-full flex-col overflow-hidden rounded-[20px] border p-8 shadow-soft transition-all duration-300 hover:-translate-y-1.5 ${
                     s.featured
                       ? 'border-brand-blue/40 bg-brand-blue/[0.05]'
@@ -61,7 +63,7 @@ export default function Services() {
                   >
                     Solicitar <ArrowRight size={14} />
                   </a>
-                </div>
+                </TiltCard>
               </Reveal>
             );
           })}

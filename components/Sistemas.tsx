@@ -28,7 +28,9 @@ const CRIAOFICINA_FEATURES = [
 
 function DashboardMockup() {
   return (
-    <div className="rounded-2xl border border-white/10 bg-[#0d1428] p-3 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.6)] aspect-[16/10]">
+    <div
+      className="aspect-[16/10] rounded-2xl border border-white/10 bg-[#0d1428] p-3 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.6)] transition-transform duration-500 [transform:perspective(1000px)_rotateY(-15deg)_rotateX(5deg)] hover:[transform:perspective(1000px)_rotateY(-5deg)_rotateX(2deg)] max-lg:[transform:none]"
+    >
       <div className="flex h-full overflow-hidden rounded-lg bg-[#050810]">
         <div className="w-1/5 border-r border-white/5 bg-[#0d1428]" />
         <div className="flex flex-1 flex-col gap-4 p-4">

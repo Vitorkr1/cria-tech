@@ -8,6 +8,30 @@ import { NAV_LINKS, waLink } from '@/lib/data';
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [curtain, setCurtain] = useState(false);
+
+  function handleMobileLinkClick(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
+    const isHomeAnchor = href.startsWith('/#');
+    if (!isHomeAnchor || window.location.pathname !== '/') {
+      setOpen(false);
+      return;
+    }
+    e.preventDefault();
+    setOpen(false);
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const id = href.slice(2);
+    if (reduceMotion) {
+      setTimeout(() => document.getElementById(id)?.scrollIntoView({ block: 'start', behavior: 'instant' }), 300);
+      return;
+    }
+
+    setCurtain(true);
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ block: 'start', behavior: 'instant' });
+      setTimeout(() => setCurtain(false), 100);
+    }, 320);
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -105,7 +129,7 @@ export default function Header() {
               <motion.a
                 key={link.href}
                 href={link.href}
-                onClick={() => setOpen(false)}
+                onClick={(e) => handleMobileLinkClick(e, link.href)}
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + i * 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
@@ -127,6 +151,41 @@ export default function Header() {
               Fale conosco
             </motion.a>
           </motion.nav>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {curtain && (
+          <>
+            <motion.div
+              key="curtain-top"
+              initial={{ y: '-100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '-100%' }}
+              transition={{ duration: 0.24, ease: [0.76, 0, 0.24, 1] }}
+              className="fixed left-0 right-0 top-0 z-[700] h-1/2 bg-brand-navdark"
+            />
+            <motion.div
+              key="curtain-bottom"
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ duration: 0.24, ease: [0.76, 0, 0.24, 1] }}
+              className="fixed bottom-0 left-0 right-0 z-[700] h-1/2 bg-brand-navdark"
+            />
+            <motion.div
+              key="curtain-logo"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.25 }}
+              className="pointer-events-none fixed inset-0 z-[701] flex items-center justify-center"
+            >
+              <span className="h-12 w-12 animate-spin-ring rounded-full bg-[conic-gradient(#0049ff,#00b4d8,#0049ff)] p-[3px]">
+                <span className="block h-full w-full rounded-full bg-brand-navdark" />
+              </span>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>
