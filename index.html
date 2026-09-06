@@ -3,14 +3,73 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CriaTech — Sites, Sistemas & Design</title>
-  <meta name="description" content="CriaTech - Desenvolvimento web, sistemas e design. Vitor Guilherme & Lucas Moreira" />
+  <title>CriaTech — Sites, Sistemas de Gestão & Design Digital</title>
+  <meta name="description" content="CriaTech desenvolve sites de alta conversão, sistemas de gestão (BarberPro e CriaOficina) e identidade visual para empresas em todo o Brasil. Orçamento gratuito." />
+  <meta name="keywords" content="criação de sites, sistema de agendamento, sistema de gestão, barbearia, oficina, design de sites, CriaTech" />
+  <meta name="author" content="CriaTech" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#050810" />
+  <link rel="canonical" href="https://criatech.online/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CriaTech" />
+  <meta property="og:title" content="CriaTech — Sites, Sistemas de Gestão & Design Digital" />
+  <meta property="og:description" content="Sistemas de gestão inteligentes, sites de alta conversão e automações que transformam seu negócio. Conheça o BarberPro e o CriaOficina." />
+  <meta property="og:image" content="https://criatech.online/logo.png" />
+  <meta property="og:url" content="https://criatech.online/" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CriaTech — Sites, Sistemas de Gestão & Design Digital" />
+  <meta name="twitter:description" content="Sistemas de gestão inteligentes, sites de alta conversão e automações que transformam seu negócio." />
+  <meta name="twitter:image" content="https://criatech.online/logo.png" />
+
   <link rel="icon" href="logoIcon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="logoIcon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "CriaTech",
+    "url": "https://criatech.online/",
+    "logo": "https://criatech.online/logo.png",
+    "image": "https://criatech.online/logo.png",
+    "description": "Desenvolvimento de sites, sistemas de gestão (BarberPro e CriaOficina) e design digital para empresas em todo o Brasil.",
+    "areaServed": "BR",
+    "founder": [
+      { "@type": "Person", "name": "Vitor Guilherme" },
+      { "@type": "Person", "name": "Lucas Moreira" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/criatech.web/"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-81-99674-4143",
+      "contactType": "customer service",
+      "areaServed": "BR",
+      "availableLanguage": "Portuguese"
+    },
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Sites" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistemas de Gestão (BarberPro / CriaOficina)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Design & Identidade Visual" } }
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <!-- Barra de progresso de rolagem -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- Cursor personalizado -->
   <div class="cursor" id="cursor"></div>
@@ -18,6 +77,13 @@
 
   <!-- Partículas de fundo -->
   <canvas id="particles"></canvas>
+
+  <!-- Blobs animados de luz (fundo) -->
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="bg-blob bg-blob-1"></span>
+    <span class="bg-blob bg-blob-2"></span>
+    <span class="bg-blob bg-blob-3"></span>
+  </div>
 
   <!-- HEADER -->
   <header id="header">
@@ -147,10 +213,13 @@
             <div class="barber-pro-content">
               <h3 class="barber-pro-title">BarberPro</h3>
               <p class="barber-pro-subtitle">O sistema de agendamentos líder para barbearias modernas</p>
-              <a href="https://wa.me/5581996744143?text=Ol%C3%A1%2C+gostaria+de+gerenciar+minha+barbearia+com+o+Barber+Pro" target="_blank" class="btn-barber-pro">
-                <span>Gerenciar minha barbearia</span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
+              <div class="barber-pro-actions">
+                <a href="https://wa.me/5581996744143?text=Ol%C3%A1%2C+gostaria+de+gerenciar+minha+barbearia+com+o+Barber+Pro" target="_blank" class="btn-barber-pro">
+                  <span>Gerenciar minha barbearia</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="https://barberpro-6yix.onrender.com/" target="_blank" rel="noopener" class="btn-ghost small-btn">Ver sistema ao vivo ↗</a>
+              </div>
             </div>
           </div>
         </div>
@@ -203,10 +272,13 @@
               <div class="f-tag"><span>✓</span> Relatórios de faturamento</div>
             </div>
 
-            <a href="https://wa.me/5581996744143?text=Ol%C3%A1%2C+quero+conhecer+o+BarberPro" target="_blank" class="btn-primary">
-              <span>Quero o BarberPro</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+            <div class="highlight-actions">
+              <a href="https://wa.me/5581996744143?text=Ol%C3%A1%2C+quero+conhecer+o+BarberPro" target="_blank" class="btn-primary">
+                <span>Quero o BarberPro</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="https://barberpro-6yix.onrender.com/" target="_blank" rel="noopener" class="btn-ghost">Ver sistema ao vivo ↗</a>
+            </div>
           </div>
           <div class="highlight-visual">
             <div class="dashboard-mockup">
@@ -263,10 +335,13 @@
             </div>
             <p class="section-desc" style="margin-top:-1.5rem; margin-bottom:2rem; font-size:0.9rem;">Ideal para: oficinas mecânicas, clínicas, consultórios, salões, lojas e comércios em geral.</p>
 
-            <a href="https://wa.me/5581996744143?text=Ol%C3%A1%2C+quero+saber+mais+sobre+o+CriaOficina" target="_blank" class="btn-primary">
-              <span>Solicitar Demonstração</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+            <div class="highlight-actions">
+              <a href="https://wa.me/5581996744143?text=Ol%C3%A1%2C+quero+saber+mais+sobre+o+CriaOficina" target="_blank" class="btn-primary">
+                <span>Solicitar Demonstração</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="https://www.criaoficina.online" target="_blank" rel="noopener" class="btn-ghost">Ver sistema ao vivo ↗</a>
+            </div>
           </div>
         </div>
       </div>
@@ -280,6 +355,12 @@
         <p class="section-desc" data-reveal>Temos vínculo direto com empresas em todo o Brasil — desenvolvemos e mantemos os sites e sistemas abaixo.</p>
 
         <div class="clients-grid">
+          <a href="https://www.cmreguladora.com.br" target="_blank" class="client-card" data-reveal>
+            <div class="client-icon">📋</div>
+            <h4>CM Reguladora</h4>
+            <p>Regulação de sinistros e vistorias</p>
+            <span class="client-link">cmreguladora.com.br <span>→</span></span>
+          </a>
           <a href="https://www.segbrasilmangabeira.com.br" target="_blank" class="client-card" data-reveal>
             <div class="client-icon">🚗</div>
             <h4>Seg Brasil Mangabeira</h4>
@@ -383,15 +464,27 @@
   <div class="section-inner">
     <div class="section-label" data-reveal>Nosso trabalho</div>
     <h2 class="section-title" data-reveal>PORTFÓLIO</h2>
+    <p class="section-desc" data-reveal>Projetos reais, entregues e em produção. Clique em "Ver projeto" para conhecer os detalhes de cada um.</p>
 
-    <div class="portfolio-grid">
+    <div class="port-filters" data-reveal role="tablist" aria-label="Filtrar portfólio por categoria">
+      <button class="port-filter active" data-filter="todos" type="button">Todos</button>
+      <button class="port-filter" data-filter="sistema" type="button">Sistemas</button>
+      <button class="port-filter" data-filter="site" type="button">Sites</button>
+      <button class="port-filter" data-filter="design" type="button">Design</button>
+    </div>
 
-      <div class="port-card port-card-launch" data-reveal>
+    <div class="portfolio-grid" id="portfolioGrid">
+
+      <div class="port-card port-card-launch" data-reveal data-category="sistema">
         <div class="port-launch-ribbon">🚀 Lançamento</div>
         <div class="port-img port-img-4">
-          <img src="Barbearia.jpg" alt="BarberPro - Sistema de Agendamento para Barbearias">
+          <img src="Barbearia.jpg" alt="BarberPro - Sistema de Agendamento para Barbearias" loading="lazy">
           <div class="port-overlay">
             <span class="port-tag">Sistema de Agendamento</span>
+            <button class="btn-ver-projeto" type="button" data-project="barberpro">
+              <span>Ver projeto</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </div>
         </div>
         <div class="port-info">
@@ -400,11 +493,15 @@
         </div>
       </div>
 
-      <div class="port-card" data-reveal>
+      <div class="port-card" data-reveal data-category="site">
         <div class="port-img port-img-1">
-          <img src="clinic-management.webp" alt="Clínica Vitalis">
+          <img src="clinic-management.webp" alt="Clínica Vitalis - Site institucional" loading="lazy">
           <div class="port-overlay">
             <span class="port-tag">Site Institucional</span>
+            <button class="btn-ver-projeto" type="button" data-project="vitalis">
+              <span>Ver projeto</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </div>
         </div>
         <div class="port-info">
@@ -413,11 +510,15 @@
         </div>
       </div>
 
-      <div class="port-card" data-reveal>
+      <div class="port-card" data-reveal data-category="site">
         <div class="port-img port-img-2">
-          <img src="Academia.jpg" alt="FitPro Academia">
+          <img src="Academia.jpg" alt="FitPro Academia - Landing page" loading="lazy">
           <div class="port-overlay">
             <span class="port-tag">Landing Page</span>
+            <button class="btn-ver-projeto" type="button" data-project="fitpro">
+              <span>Ver projeto</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </div>
         </div>
         <div class="port-info">
@@ -426,11 +527,15 @@
         </div>
       </div>
 
-      <div class="port-card" data-reveal>
+      <div class="port-card" data-reveal data-category="sistema">
         <div class="port-img port-img-3">
-          <img src="sistema-cgk.jpg" alt="Flow Solutions">
+          <img src="sistema-cgk.jpg" alt="Flow Solutions - Sistema web" loading="lazy">
           <div class="port-overlay">
             <span class="port-tag">Sistema Web</span>
+            <button class="btn-ver-projeto" type="button" data-project="flow">
+              <span>Ver projeto</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </div>
         </div>
         <div class="port-info">
@@ -439,11 +544,15 @@
         </div>
       </div>
 
-      <div class="port-card" data-reveal>
+      <div class="port-card" data-reveal data-category="sistema">
         <div class="port-img port-img-5">
-          <img src="ChatGPT Image 23 de abr. de 2026, 09_48_43.png" alt="Registro de produtos">
+          <img src="ChatGPT Image 23 de abr. de 2026, 09_48_43.png" alt="Registro de produtos - Sistema de registro" loading="lazy">
           <div class="port-overlay">
             <span class="port-tag">Registro de Cortes</span>
+            <button class="btn-ver-projeto" type="button" data-project="registro">
+              <span>Ver projeto</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </div>
         </div>
         <div class="port-info">
@@ -452,7 +561,30 @@
         </div>
       </div>
 
+      <div class="port-card port-card-launch" data-reveal data-category="sistema">
+        <div class="port-launch-ribbon">🤖 Novo · IA</div>
+        <div class="port-img port-img-6">
+          <div class="mock-finpilot" aria-hidden="true">
+            <div class="mock-finpilot-bar"></div>
+            <div class="mock-finpilot-chart"></div>
+            <div class="mock-finpilot-rows"><div></div><div></div><div></div></div>
+          </div>
+          <div class="port-overlay">
+            <span class="port-tag">Sistema com Inteligência Artificial</span>
+            <button class="btn-ver-projeto" type="button" data-project="finpilot">
+              <span>Ver projeto</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="port-info">
+          <h4>FinPilot AI <span class="port-new-tag">NOVO</span></h4>
+          <p>Gestão financeira inteligente com IA</p>
+        </div>
+      </div>
+
     </div>
+    <p class="port-empty" id="portEmpty" hidden>Nenhum projeto encontrado nessa categoria.</p>
   </div>
 </section>
 
@@ -689,6 +821,43 @@
 
   </div>
 </footer>
+
+<!-- PROJECT MODAL (janela de projeto) -->
+<div class="project-modal" id="projectModal" aria-hidden="true">
+  <div class="project-modal-backdrop" id="modalBackdrop"></div>
+  <div class="project-modal-window" id="modalWindow" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+    <div class="modal-window-bar">
+      <div class="modal-window-dots"><span></span><span></span><span></span></div>
+      <div class="modal-window-title" id="modalProjectTitle">Projeto</div>
+      <button class="modal-close" id="modalClose" type="button" aria-label="Fechar janela do projeto">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="modal-window-body">
+      <div class="modal-media" id="modalMedia">
+        <img id="modalImage" src="" alt="">
+        <div class="modal-media-fallback" id="modalFallback" hidden>
+          <span class="modal-fallback-icon">🤖</span>
+          <span>Acesse o sistema completo ao vivo pelo botão abaixo</span>
+        </div>
+        <span class="modal-category-badge" id="modalCategory"></span>
+      </div>
+      <div class="modal-details">
+        <h3 id="modalHeading"></h3>
+        <p id="modalDescription"></p>
+        <div class="modal-tags" id="modalTags"></div>
+        <div class="modal-actions">
+          <a href="#" target="_blank" rel="noopener" class="btn-ghost" id="modalLive" hidden>Ver sistema ao vivo ↗</a>
+          <a href="#" target="_blank" class="btn-primary" id="modalCTA">
+            <span>Solicitar Orçamento</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <button class="btn-ghost" id="modalCloseBtn" type="button">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>

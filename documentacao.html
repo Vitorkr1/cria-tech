@@ -5,16 +5,38 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Documentação — CriaTech</title>
   <meta name="description" content="Documentação oficial da CriaTech: quem somos, serviços, sistemas próprios (BarberPro e CriaOficina), clientes atendidos e contato." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#050810" />
+  <link rel="canonical" href="https://criatech.online/documentacao.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CriaTech" />
+  <meta property="og:title" content="Documentação — CriaTech" />
+  <meta property="og:description" content="Documentação oficial da CriaTech: quem somos, serviços, sistemas próprios e clientes atendidos." />
+  <meta property="og:image" content="https://criatech.online/logo.png" />
+  <meta property="og:url" content="https://criatech.online/documentacao.html" />
+  <meta property="og:locale" content="pt_BR" />
   <link rel="icon" href="logoIcon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="logoIcon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Barra de progresso de rolagem -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <!-- Cursor personalizado -->
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Blobs animados de luz (fundo) -->
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="bg-blob bg-blob-1"></span>
+    <span class="bg-blob bg-blob-2"></span>
+    <span class="bg-blob bg-blob-3"></span>
+  </div>
 
   <!-- HEADER -->
   <header id="header">
@@ -175,6 +197,7 @@
           <h2><span class="doc-num">06</span> Clientes e parceiros</h2>
           <p>A CriaTech mantém vínculo direto com empresas de segurança, proteção veicular e frotas em diferentes estados do Brasil, sendo responsável pelo desenvolvimento e manutenção dos sites abaixo:</p>
           <div class="doc-clients-list">
+            <a href="https://www.cmreguladora.com.br" target="_blank">CM Reguladora <span>Regulação de sinistros</span></a>
             <a href="https://www.segbrasilmangabeira.com.br" target="_blank">Seg Brasil Mangabeira <span>Proteção veicular</span></a>
             <a href="https://www.visionfleet.solutions" target="_blank">Vision Fleet <span>Rastreamento de frotas</span></a>
             <a href="https://www.jdseguranca.online" target="_blank">JDS Segurança Eletrônica <span>CFTV e monitoramento</span></a>
