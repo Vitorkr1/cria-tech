@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       follower.style.left = e.clientX + 'px';
       follower.style.top = e.clientY + 'px';
     });
-    document.querySelectorAll('a, button, .service-card, .port-card, .team-card, .client-card, .port-filter, .btn-ver-projeto, .modal-close').forEach(el => {
+    document.querySelectorAll('a, button, .service-card, .port-card, .team-card, .client-card, .port-filter, .btn-ver-projeto, .modal-close, .floating-whatsapp, .back-to-top').forEach(el => {
       el.addEventListener('mouseenter', () => {
         cursor.style.transform = 'translate(-50%,-50%) scale(2)';
         follower.style.width = '50px';
@@ -402,6 +402,47 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && projectModal && projectModal.classList.contains('open')) closeProjectModal();
   });
+
+  // ===========================
+  // BOTÃO FLUTUANTE WHATSAPP — entrada animada
+  // ===========================
+  const floatingWhatsapp = document.getElementById('floatingWhatsapp');
+  if (floatingWhatsapp) {
+    setTimeout(() => floatingWhatsapp.classList.add('fw-visible'), 1200);
+  }
+
+  // ===========================
+  // BOTÃO VOLTAR AO TOPO
+  // ===========================
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 600);
+    }, { passive: true });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ===========================
+  // EFEITO MAGNÉTICO (botões flutuantes)
+  // ===========================
+  if (!isTouchDeviceMagnet()) {
+    document.querySelectorAll('.floating-whatsapp, .back-to-top').forEach(el => {
+      el.addEventListener('mousemove', (e) => {
+        const rect = el.getBoundingClientRect();
+        const x = (e.clientX - rect.left - rect.width / 2) * 0.35;
+        const y = (e.clientY - rect.top - rect.height / 2) * 0.35;
+        el.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = '';
+      });
+    });
+  }
+  function isTouchDeviceMagnet() {
+    return window.matchMedia('(hover: none)').matches;
+  }
 
   // ===========================
   // TILT 3D NOS CARDS (hover)
