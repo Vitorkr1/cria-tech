@@ -1,6 +1,6 @@
 'use client';
 
-import { FileText, Instagram, Phone, Send } from 'lucide-react';
+import { Instagram, Send } from 'lucide-react';
 import { useState, type FormEvent } from 'react';
 import Reveal from './Reveal';
 import { waLink } from '@/lib/data';
@@ -27,27 +27,6 @@ const CONTACT_LINKS = [
     href: 'https://www.instagram.com/criatech.web/',
     icon: <Instagram size={20} />,
     iconBg: 'bg-[#e1306c]/15 text-[#e1306c]',
-  },
-  {
-    label: 'WhatsApp / Celular',
-    value: '(81) 99674-4143',
-    href: 'tel:+5581996744143',
-    icon: <Phone size={20} />,
-    iconBg: 'bg-brand-blue/15 text-brand-blue',
-  },
-  {
-    label: 'Telefone fixo',
-    value: '(81) 8736-4575',
-    href: 'tel:+5581987364575',
-    icon: <Phone size={20} />,
-    iconBg: 'bg-brand-blue/15 text-brand-blue',
-  },
-  {
-    label: 'Documentação',
-    value: 'Sobre a CriaTech e nossos sistemas',
-    href: '/documentacao/',
-    icon: <FileText size={20} />,
-    iconBg: 'bg-purple-500/10 text-purple-500',
   },
 ];
 

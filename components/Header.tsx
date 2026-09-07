@@ -181,7 +181,7 @@ export default function Header() {
               transition={{ duration: 0.25 }}
               className="pointer-events-none fixed inset-0 z-[701] flex items-center justify-center"
             >
-              <span className="h-12 w-12 animate-spin-ring rounded-full bg-[conic-gradient(#0049ff,#00b4d8,#0049ff)] p-[3px]">
+              <span className="h-12 w-12 animate-spin-ring rounded-full bg-[conic-gradient(#0044ff,#3d7bff,#0044ff)] p-[3px]">
                 <span className="block h-full w-full rounded-full bg-brand-navdark" />
               </span>
             </motion.div>

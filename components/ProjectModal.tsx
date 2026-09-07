@@ -135,7 +135,7 @@ export default function ProjectModal({
                       target="_blank"
                       rel="noopener noreferrer"
                       data-cursor-hover
-                      className="inline-flex items-center gap-2 rounded-xl border border-brand-border px-6 py-3 font-medium text-brand-ink transition-all hover:border-brand-ink/30 hover:bg-brand-surfaceAlt"
+                      className="inline-flex items-center gap-2 rounded-xl border-2 border-brand-blue px-6 py-2.5 font-semibold text-brand-blue transition-all hover:bg-brand-blue/5"
                     >
                       {project.category === 'site' ? 'Ver site ao vivo ↗' : 'Ver sistema ao vivo ↗'}
                     </a>

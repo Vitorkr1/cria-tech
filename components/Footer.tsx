@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { NAV_LINKS } from '@/lib/data';
+import { FOOTER_LINKS } from '@/lib/data';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -17,7 +17,7 @@ export default function Footer() {
         </div>
 
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-          {NAV_LINKS.filter((l) => l.label !== 'Início').map((link) => (
+          {FOOTER_LINKS.map((link) => (
             <a key={link.href} href={link.href} className="text-sm text-white/55 transition-colors hover:text-white">
               {link.label}
             </a>

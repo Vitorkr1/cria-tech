@@ -8,16 +8,16 @@ html {
 
 body {
   background: #ffffff;
-  color: #0b0e17;
+  color: #0a0a0a;
 }
 
 ::selection {
-  background: rgba(0, 73, 255, 0.2);
-  color: #0b0e17;
+  background: rgba(0, 68, 255, 0.2);
+  color: #0a0a0a;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #0049ff, #00b4d8);
+  background: linear-gradient(135deg, #0044ff, #3d7bff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

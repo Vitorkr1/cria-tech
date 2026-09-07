@@ -1,8 +1,5 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import Sistemas from '@/components/Sistemas';
-import Services from '@/components/Services';
-import Clients from '@/components/Clients';
 import Projects from '@/components/Projects';
 import Founders from '@/components/Founders';
 import Contact from '@/components/Contact';
@@ -14,9 +11,6 @@ export default function HomePage() {
       <Header />
       <main className="relative z-10">
         <Hero />
-        <Sistemas />
-        <Services />
-        <Clients />
         <Projects />
         <Founders />
         <Contact />

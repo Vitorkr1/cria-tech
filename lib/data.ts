@@ -6,11 +6,13 @@ export function waLink(message: string) {
 
 export const NAV_LINKS = [
   { href: '/#inicio', label: 'Início' },
-  { href: '/#sistemas', label: 'Sistemas' },
-  { href: '/#servicos', label: 'Serviços' },
-  { href: '/#clientes', label: 'Clientes' },
   { href: '/#projetos', label: 'Projetos' },
-  { href: '/#fundadores', label: 'Fundadores' },
+  { href: '/#fundadores', label: 'Sobre' },
+];
+
+export const FOOTER_LINKS = [
+  { href: '/#projetos', label: 'Projetos' },
+  { href: '/#fundadores', label: 'Sobre' },
   { href: '/#contato', label: 'Contato' },
   { href: '/documentacao/', label: 'Documentação' },
 ];
@@ -223,67 +225,3 @@ export const TEAM = [
   },
 ];
 
-export const CLIENTS = [
-  {
-    name: 'CM Reguladora',
-    icon: '📋',
-    desc: 'Regulação de sinistros e vistorias',
-    url: 'https://www.cmreguladora.com.br',
-  },
-  {
-    name: 'Seg Brasil Mangabeira',
-    icon: '🚗',
-    desc: 'Proteção veicular — João Pessoa/PB',
-    url: 'https://www.segbrasilmangabeira.com.br',
-  },
-  {
-    name: 'Vision Fleet',
-    icon: '🛰️',
-    desc: 'Rastreamento e videotelemetria de frotas',
-    url: 'https://www.visionfleet.solutions',
-  },
-  {
-    name: 'JDS Segurança Eletrônica',
-    icon: '🎥',
-    desc: 'CFTV, alarmes e monitoramento — Recife/PE',
-    url: 'https://www.jdseguranca.online',
-  },
-  {
-    name: 'Marcílio Segurança Eletrônica',
-    icon: '🔐',
-    desc: 'Cercas elétricas, câmeras e automação',
-    url: 'https://www.marciliosegurancaeletronica.online',
-  },
-  {
-    name: 'Michel Representações',
-    icon: '💳',
-    desc: 'Proteção veicular, crédito e limpeza de nome',
-    url: 'https://www.michelschwartzrepresentacoes.shop',
-  },
-];
-
-export const SERVICES = [
-  {
-    title: 'Sites Profissionais',
-    desc: 'Design responsivo, SEO técnico, velocidade máxima. Seu site vendendo 24h por dia.',
-    items: ['Landing pages de alta conversão', 'Portfólios e sites institucionais', 'E-commerces completos'],
-    featured: false,
-  },
-  {
-    title: 'Sistemas & Dashboards',
-    desc: 'Aplicações sob medida: gestão, agendamento, CRMs e integrações com APIs modernas.',
-    items: [
-      'BarberPro — Agendamento p/ barbearias',
-      'CriaOficina — Gestão p/ oficinas, clínicas e lojas',
-      'Registro de cortes / produtos',
-      'Sistemas sob medida e integrações',
-    ],
-    featured: true,
-  },
-  {
-    title: 'Design & Brand',
-    desc: 'Identidade visual que posiciona sua marca. UX/UI que converte e encanta usuários.',
-    items: ['Logo & identidade visual', 'Design de produto (UX/UI)', 'Prototipação rápida no Figma'],
-    featured: false,
-  },
-];

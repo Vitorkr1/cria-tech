@@ -6,17 +6,17 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          blue: '#0049ff',
+          blue: '#0044ff',
           blueDark: '#0038c7',
-          cyan: '#0091c9',
-          ink: '#0b0e17',
-          navdark: '#0b0e17',
-          navdark2: '#11162a',
-          muted: '#5b6478',
+          cyan: '#3d7bff',
+          ink: '#0a0a0a',
+          navdark: '#1e1e1e',
+          navdark2: '#262626',
+          muted: '#262626',
           surface: '#ffffff',
-          surfaceAlt: '#f5f7fb',
-          surfaceAlt2: '#eef1f7',
-          border: 'rgba(11,14,23,0.10)',
+          surfaceAlt: '#f2f3f5',
+          surfaceAlt2: '#e8e8ea',
+          border: 'rgba(0,0,0,0.12)',
         },
       },
       fontFamily: {
