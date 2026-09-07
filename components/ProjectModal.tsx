@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { X } from 'lucide-react';
 import type { Project } from '@/lib/data';
 import { waLink } from '@/lib/data';
+import ProjectPreview from './ProjectPreview';
 
 export default function ProjectModal({
   project,
@@ -83,20 +84,20 @@ export default function ProjectModal({
                 {project.image ? (
                   <Image src={project.image} alt={project.title} fill sizes="450px" className="object-cover" />
                 ) : (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-gradient-to-br from-brand-surfaceAlt to-brand-surfaceAlt2 p-8 text-center text-brand-muted">
-                    <span className="text-6xl drop-shadow-[0_0_16px_rgba(0,145,201,0.35)]">
-                      {project.icon ?? '✨'}
-                    </span>
-                    {project.price ? (
-                      <span className="font-sans text-3xl font-extrabold text-brand-ink">{project.price}</span>
-                    ) : (
-                      <span className="text-sm">
-                        {project.live
-                          ? 'Acesse o sistema completo ao vivo pelo botão abaixo'
-                          : 'Acesse o site completo pelo botão abaixo'}
-                      </span>
-                    )}
-                  </div>
+                  <>
+                    <ProjectPreview id={project.id} />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/35 p-8 text-center text-white">
+                      {project.price ? (
+                        <span className="font-sans text-3xl font-extrabold drop-shadow">{project.price}</span>
+                      ) : (
+                        <span className="text-sm font-medium drop-shadow">
+                          {project.live
+                            ? 'Acesse o sistema completo ao vivo pelo botão abaixo'
+                            : 'Acesse o site completo pelo botão abaixo'}
+                        </span>
+                      )}
+                    </div>
+                  </>
                 )}
                 <span className="absolute left-4 top-4 rounded-full bg-brand-blue px-3 py-1 text-xs font-bold text-white shadow-glowBlue">
                   {project.categoryLabel}

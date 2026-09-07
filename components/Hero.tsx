@@ -36,7 +36,7 @@ export default function Hero() {
           initial="hidden"
           animate="show"
           variants={fadeUp}
-          className="font-sans font-extrabold text-[clamp(2.1rem,5.5vw,3.6rem)] leading-[1.08] text-brand-ink mb-5"
+          className="font-sans font-bold text-[clamp(2.1rem,5.5vw,3.6rem)] leading-[1.04] text-brand-ink mb-3"
         >
           O futuro da sua empresa <span className="gradient-text reveal-underline">começa aqui.</span>
         </motion.h1>
@@ -46,7 +46,7 @@ export default function Hero() {
           initial="hidden"
           animate="show"
           variants={fadeUp}
-          className="text-brand-muted text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-8"
+          className="text-brand-muted text-base sm:text-lg font-semibold leading-snug max-w-xl mx-auto mb-6"
         >
           Sistemas de gestão inteligentes, sites de alta conversão e automações que transformam seu negócio em uma
           máquina de lucro.
@@ -57,7 +57,7 @@ export default function Hero() {
           initial="hidden"
           animate="show"
           variants={fadeUp}
-          className="flex flex-wrap items-center justify-center gap-4 mb-14"
+          className="flex flex-wrap items-center justify-center gap-4 mb-10"
         >
           <a
             href={waLink('Olá, quero um orçamento com a CriaTech')}
